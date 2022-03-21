@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Regsiter Page</title>
+
+  <link rel="icon" type="image/x-icon" href="images/fav.png">
+  <link rel="stylesheet" href="css/reg-styl.css">
+  </head>
+  <body>
+    <div class="header">
+    </div>
+    <div class="register-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <br><br><br><p class="message">Already registered? <a href="Login.html">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+
+  </div>
+  <script type="text/javascript">
+    $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+  </script>
+  </body>
+</html>
