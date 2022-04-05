@@ -1,0 +1,124 @@
+li {
+  padding-left: 1em;
+  line-height: 1.6rem;
+  color: hsl(357, 12%, 42%);
+  margin: 12px 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 5fr 1fr;
+}
+
+.container div {
+  border: 3px ;
+  padding: 1em;
+}
+
+.header {
+  background-color: rgb(217, 85, 80);
+  margin: 0;
+}
+
+.heading {
+  float: left;
+  position: relative;
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+.timer {
+  display: grid;
+  background-color: #EEEDDE;
+  grid-template-columns: 1fr 3fr 1fr;
+  text-align: center;
+}
+
+.time-c {
+  font-size: 120px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(217, 85, 80);
+}
+
+.h2 {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 37.5px;
+}
+
+h3 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+p {
+  display: block;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: rgb(120, 94, 96);
+}
+
+.flexbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-item {
+  width: auto;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  min-height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 0px 30px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  width: 40%;
+  justify-content: center;
+}
+
+.dFxGRv {
+  cursor: pointer;
+  border: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  box-shadow: rgb(235 235 235) 0px 6px 0px;
+  font-family: ArialRounded;
+  font-size: 22px;
+  height: 55px;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+  background-color: rgb(217, 85, 80);
+  transition: color 0.5s ease-in-out 0s;
+}
+
+.title {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-family: ArialRounded, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.btn{
+padding: 10px 15px;
+background-color:rgb(217, 85, 80);
+color:white;
+border-radius: 10%;
+}
