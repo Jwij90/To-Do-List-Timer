@@ -29,7 +29,7 @@
   </div>
   <div class="login-page">
     <div class="form">
-      <form class="login-form" name="myform" method="post" onsubmit="return CheckForm()">
+      <form class="login-form" name="myform" method="post" onsubmit="return CheckForm()" action="Home.html">
         <input type="text" placeholder="username" name="username" required/>
         <input type="password" placeholder="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
         <button type ="submit">login</button>
