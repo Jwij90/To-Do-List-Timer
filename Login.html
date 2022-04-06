@@ -7,8 +7,17 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="images/fav.png">
-  
-  function CheckForm(){
+
+<script type="text/javascript">
+	
+    $('.message a').click(function() {
+      $('form').animate({
+        height: "toggle",
+        opacity: "toggle"
+      }, "slow");
+    });
+	
+	function CheckForm(){
 				var Username = document.forms["myform"]["username"].value;
 				if(Username ==""){
 				alert("You have to input your name");
@@ -16,6 +25,10 @@
 				}
 				return true;
 			}
+	
+  </script>
+  
+  
   
 </head>
 
@@ -36,14 +49,7 @@
   <div class="footer">
 
   </div>
-  <script type="text/javascript">
-    $('.message a').click(function() {
-      $('form').animate({
-        height: "toggle",
-        opacity: "toggle"
-      }, "slow");
-    });
-  </script>
+ 
 </body>
 
 </html>
