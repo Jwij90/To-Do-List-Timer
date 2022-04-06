@@ -19,8 +19,13 @@
 	
 	function CheckForm(){
 				var Username = document.forms["myform"]["username"].value;
+		var Password = document.forms["myform"]["password"].value;
 				if(Username ==""){
-				alert("You have to input your name");
+				alert("Username is required field!");
+				return false;
+				}
+		if(Password ==""){
+				alert("Password is required field!");
 				return false;
 				}
 				return true;
@@ -38,8 +43,8 @@
   <div class="login-page">
     <div class="form">
       <form class="login-form" name="myform" method="post" onsubmit="return CheckForm()">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
+        <input type="text" placeholder="username" name="username" required />
+        <input type="password" placeholder="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
         <button type ="submit">login</button>
         <br><br><br>
         <p class="message">Not registered? <a href="register.html">Create an account</a></p>
