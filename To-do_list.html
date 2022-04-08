@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do List Page</title>
+    <link rel="stylesheet" href="To-do_list.css">
+  </head>
+  <body>
+    <script src="To-do_list.js"></script>
+    <div class="topnav">
+      <a href="About_us.html">About us</a>
+      <a href="Timer.html">Pomodoro Timer</a>
+      <a href="To-do_list.html">To-Do List</a>
+      <a class="active" href="Home.html">Home</a>
+    </div>
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px"><br>My To Do List</h2><br>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+    <div class="footer">
+      <div class="footer-a">
+        <a class="footer-nav" href="#">Contact Us</a>
+        <a class="footer-nav" href="#">Facebook</a>
+        <a class="footer-nav" href="#">Twitter</a>
+      </div>
+    </div>
+    <br><br>
+      <ul id="myUL">
+        <div class="checked"></div>
+      </ul>
+  </body>
+</html>
