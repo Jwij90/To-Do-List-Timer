@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-image: url('contact_us.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(217, 85, 80);
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+a:hover {
+  background-color: #ECA6A6;
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #203239;
+  text-align: center;
+}
+
+.footer-nav {
+  text-decoration: none;
+  padding: 20px 20px;
+  font-size: 17px;
+  color: white;
+}
+
+.footer-a {
+  margin-top: 5%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.contact_us {
+  padding: 40px;
+  text-align:center;
+  color: #CD5C5C;
+  text-shadow: 2px 2px gray;
+  font-size:2rem;
+  font-family:"Times New Roman", Times, serif
+}
+
+.details {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 12px 300px 12px 300px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
