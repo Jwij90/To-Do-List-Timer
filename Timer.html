@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/timer-style.css">
   <link rel="icon" type="image/x-icon" href="images/fav.png">
   <link rel="stylesheet" href="css/header_footer.css">
-
 </head>
 
 <body>
@@ -17,31 +16,32 @@
         <h2>Focus with pomodoro</h2>
       </div>
       <div class="topnav">
-        <a href="About_us.html">About us</a>
+        <a href="#About us">About us</a>
         <a href="#Pomodoro Timer">Pomodoro Timer</a>
-        <a href="#news">To-Do-List</a>
-        <a class="active" href="Home.html">Home</a>
+        <a href="#to do">To-Do-List</a>
+        <a class="active" href="Home.php">Home</a>
       </div>
     </div>
 
-    <div class="timer">
-      <div class="sec-01"></div>
-      <div class="sec-02">
+    <div id="pomodoro-app">
+      <div id="contain-app">
+        <div id="timer">
+          <div id="time">
+            <span id="minutes">25</span>
+            <span id="colon">:</span>
+            <span id="seconds">00</span>
+          </div>
+          <div id="filler"></div>
+        </div>
 
-        <button type="button" name="button" class="btn">pomodoro</button>
-        <button type="button" name="button" class="btn">Short Break</button>
-        <button type="button" name="button" class="btn">Long Break</button>
-        <div id="timer-string" class="time-c">
-
-
-          25:00</div>
-        <button color="rgb(217 85 80)" class="sc-bdVaJa sc-htpNat sc-TFwJa dFxGRv" onclick="setTimeout(myFunction, 3000)" >START</button>
-
-
+        <div id="buttons">
+          <button id="work">Work</button>
+          <button id="shortBreak">Short Break</button>
+          <button id="longBreak">Long Break</button>
+          <button id="stop">Stop</button>
+        </div>
       </div>
-      <div class="sec-03"></div>
     </div>
-
 
 
     <div class="content">
@@ -72,7 +72,6 @@
           <li><strong>Take a break</strong> for 5 minutes when the alarm ring</li>
           <li><strong>Iterate</strong> 3-5 until you finish the tasks</li>
         </ol>
-
       </div>
     </div>
 
@@ -82,21 +81,95 @@
         <a class="footer-nav" href="#">Facebook</a>
         <a class="footer-nav" href="#">Twitter</a>
       </div>
-
     </div>
 
   </div>
-  <script>
-
-    function myFunction() {
-      alert('Hello');
-    }
-
-const timer = {
-  pomodoro =25;
-  shortBreak = 5;
-  longBreak = 15;
-}
+  <script type="text/javascript">
+    var pomodoro = {
+      started: false,
+      minutes: 0,
+      seconds: 0,
+      fillerHeight: 0,
+      fillerIncrement: 0,
+      interval: null,
+      minutesDom: null,
+      secondsDom: null,
+      fillerDom: null,
+      init: function() {
+        var self = this;
+        this.minutesDom = document.querySelector('#minutes');
+        this.secondsDom = document.querySelector('#seconds');
+        this.fillerDom = document.querySelector('#filler');
+        this.interval = setInterval(function() {
+          self.intervalCallback.apply(self);
+        }, 1000);
+        document.querySelector('#work').onclick = function() {
+          self.startWork.apply(self);
+        };
+        document.querySelector('#shortBreak').onclick = function() {
+          self.startShortBreak.apply(self);
+        };
+        document.querySelector('#longBreak').onclick = function() {
+          self.startLongBreak.apply(self);
+        };
+        document.querySelector('#stop').onclick = function() {
+          self.stopTimer.apply(self);
+        };
+      },
+      resetVariables: function(mins, secs, started) {
+        this.minutes = mins;
+        this.seconds = secs;
+        this.started = started;
+        this.fillerIncrement = 200 / (this.minutes * 60);
+        this.fillerHeight = 0;
+      },
+      startWork: function() {
+        this.resetVariables(25, 0, true);
+      },
+      startShortBreak: function() {
+        this.resetVariables(5, 0, true);
+      },
+      startLongBreak: function() {
+        this.resetVariables(15, 0, true);
+      },
+      stopTimer: function() {
+        this.resetVariables(25, 0, false);
+        this.updateDom();
+      },
+      toDoubleDigit: function(num) {
+        if (num < 10) {
+          return "0" + parseInt(num, 10);
+        }
+        return num;
+      },
+      updateDom: function() {
+        this.minutesDom.innerHTML = this.toDoubleDigit(this.minutes);
+        this.secondsDom.innerHTML = this.toDoubleDigit(this.seconds);
+        this.fillerHeight = this.fillerHeight + this.fillerIncrement;
+        this.fillerDom.style.height = this.fillerHeight + 'px';
+      },
+      intervalCallback: function() {
+        if (!this.started) return false;
+        if (this.seconds == 0) {
+          if (this.minutes == 0) {
+            this.timerComplete();
+            return;
+          }
+          this.seconds = 59;
+          this.minutes--;
+        } else {
+          this.seconds--;
+        }
+        this.updateDom();
+      },
+      timerComplete: function() {
+        this.started = false;
+        this.fillerHeight = 0;
+      }
+    };
+    window.onload = function() {
+      pomodoro.init();
+    };
   </script>
 </body>
 
