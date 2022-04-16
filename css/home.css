@@ -1,24 +1,120 @@
-body{
+body {
   margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F7F5F2;
+}
+.top-container{
+  background-color: #97DBAE;
+}
+.user-profile{
+  border-radius:50%;
+  background-color: #1E5128;
+  padding: 10px;
+cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
-.container{
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 3fr 5fr;
+
+h3, p, h5 {
+  position: relative;
+  text-align: center;
+  font-family: "Karma", sans-serif;
+  padding: 20px;
+}
+h3{
+  font-size: 20px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 100px;
+  border-color: black;
+  height: 700px;
+  margin-top: 40px;
 }
 
-.container div {
-  border: 3px black;
-  padding: 1em;
+.image-container {
+  align-items: center;
 }
 
-.section-2{
-
-
+.two {
+  border-right-color: #FF8080;
+  border-right-width: thick;
+  border-right-style: solid;
+  border-left-color: #FF8080;
+  border-left-width: thick;
+  border-left-style: solid;
 }
 
-.section-3{
+.right {
+  float: right;
+}
 
+.img1{
+  margin: 0;
+  object-fit: cover;
+}
+
+p {
+  display: block;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #FE7F88;
+  background-color: transparent;
+}
+
+.top-nav a {
+  display: inline-block;
+  color: #C85C5C;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+/* Change the color of links on mouse-over */
+.top-nav a:hover {
+  background-color: #CDF2CA;
+  color: #1E5128;
+}
+
+.image-container a{
+  display: inline-block;
+  color: #C85C5C;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  position:relative;
+  margin-left: 130px;
+
+}
+.image-container a:hover {
+  background-color: #CDF2CA;
+  color: #1E5128;
+}
+
+.image {
+  padding: 15px 25px;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+.footer {
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #203239;
+  text-align: center;
+}
+
+.footer-nav {
+  text-decoration: none;
+  padding: 35px 20px;
+  font-size: 17px;
+  color: white;
 }
